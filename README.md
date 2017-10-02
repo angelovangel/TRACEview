@@ -4,7 +4,9 @@ Tested with chromatograms from Chromeleon.
 
 Usage:
 the easiest way is to run this in RStudio
-
 `shiny::runGitHub("TRACEview", "angelovangel")`
+
+Have fun!
+Angel
 
 
