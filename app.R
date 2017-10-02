@@ -1,4 +1,4 @@
-## TRACE-viewer-app.R ##
+## TRACE-view-app.R ##
 
 # This app reads in chromatogram files from any chromatography system (exported as csv or similar)
 # and plots the traces. The app allows shifting of the traces in the y-axis.
@@ -18,7 +18,7 @@ library(shiny)
 library(shinydashboard)
 #library(clusterSim)
 
-header <- dashboardHeader(title = "TRACE-viewer")
+header <- dashboardHeader(title = "TRACE-view")
 
 sidebar <- dashboardSidebar(
   sidebarMenu(
