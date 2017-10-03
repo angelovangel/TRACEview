@@ -63,7 +63,7 @@ body <- dashboardBody(
                 selectizeInput("selectSamples", "Select samples to plot", choices =NULL, multiple = TRUE),
                 sliderInput("shift", "y-shift", min = 0, max = 250, step = 1, value = 0)
                 )),
-            fluidRow(rbokehOutput("plot"))#, width = 1100, height = 500))
+            fluidRow(rbokehOutput("plot"))#, width = 1100, height = 800))
             
                 ),
     tabItem(tabName = "simTLC",
@@ -164,7 +164,7 @@ The app needs the first column to be numerics only!")))
  
   
 output$plot <- renderRbokeh({
-  figure(width = 2000, height = 600) %>% 
+  figure(width = 2000, height = 800) %>% 
       ly_lines(x = time, y = sig2, color = sample, data = df2(), width = 2, alpha = 0.8)
     
       })
@@ -179,7 +179,7 @@ if(input$scalePerRow == "no") df3 <- reactive({df2() %>% filter(time >= input$xt
 output$tlc <- renderPlot({
   df3()  %>% 
     ggplot(aes(sample, time)) + 
-    geom_point(aes(color= sig), size= input$bandsize, stroke = 0) + 
+    geom_point(aes(color= sig), size= input$bandsize, stroke = 0.5) + 
     scale_color_gradient(trans = input$sigTrans, low = "white", high = "black") + 
     
     coord_flip() + 
