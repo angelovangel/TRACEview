@@ -164,7 +164,7 @@ The app needs the first column to be numerics only!")))
  
   
 output$plot <- renderRbokeh({
-  figure(width = 2000, height = 800) %>% 
+  figure(width = 3000, height = 1000) %>% 
       ly_lines(x = time, y = sig2, color = sample, data = df2(), width = 2, alpha = 0.8)
     
       })
