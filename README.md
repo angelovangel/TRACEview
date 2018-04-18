@@ -10,7 +10,7 @@ or alternatively,
 download the app.R file, open it in RStudio and press the "Run App" button.  
 
 ### Prerequisites
-The libraries required (have to be installed in `R` first) are:  
+The libraries required (have to be installed in `R` first) are:   
 `ggplot2` `dplyr` `purrr` `readr` `stringr` `rbokeh` `shiny` and `shinydashboard`
 
 Have fun!  
